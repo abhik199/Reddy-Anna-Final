@@ -31,7 +31,7 @@ export const CardProvider = ({ children }) => {
   const deleteCard = async (id) => {
     try {
       await remove_cards(id); // Use your API function
-      setCards(cards.filter((card) => card._id !== id)); // Use _id if that's your ID field
+      setCards(cards.filter((card) => card.id !== id)); // Use id if that's your ID field
     } catch (error) {
       console.error("Error deleting card:", error);
     }
